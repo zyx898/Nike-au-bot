@@ -1,5 +1,5 @@
 # Nike-au-bot
-"BOTBOTBOT??"
+"BOTBOTBOT??" if you like it please give it a star
 
 Command: !nikecartAU sku size
 
