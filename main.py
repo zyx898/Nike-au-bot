@@ -37,7 +37,6 @@ def cart_nike_au(producturl,size):
         time.sleep(2)
     return (driver.current_url)
 
-cart_nike_au('https://www.nike.com/au/t/xyisthebossman/554724-068','11')
 
 
 client = discord.Client()
