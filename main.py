@@ -25,14 +25,19 @@ def cart_nike_au(producturl,size):
     while 'cart' not in driver.current_url:
         time.sleep(2)
     time.sleep(2)
-    driver.find_element_by_xpath('//*[@id="react-root"]/div/div[6]/button').click()
-    time.sleep(2)
-    driver.find_element_by_xpath('//*[@id="react-root"]/div/div[4]/div/div/button[1]').click()
+    try:
+        driver.find_element_by_xpath('//*[@id="react-root"]/div/div[6]/button').click()
+        time.sleep(2)
+        driver.find_element_by_xpath('//*[@id="react-root"]/div/div[4]/div/div/button[1]').click()
+    except:
+        driver.find_element_by_xpath('//*[@id="maincontent"]/div[2]/div[2]/aside/div[5]/div/button[1]').click()
+
     time.sleep(2)
     while "checkout" not in driver.current_url:
         time.sleep(2)
     return (driver.current_url)
 
+cart_nike_au('https://www.nike.com/au/t/xyisthebossman/554724-068','11')
 
 
 client = discord.Client()
